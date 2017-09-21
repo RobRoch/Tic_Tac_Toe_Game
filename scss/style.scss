@@ -1,0 +1,66 @@
+$border-game: 1px solid grey;
+$color-game: #FBBA64;
+$color-jaina: #340D32;
+$color-grom: #7B0305;
+body {
+  background: url(../images/background-image.jpg) no-repeat center center fixed;
+  background-image: cover;
+}
+.ticTacToe {
+  font-family: 'Russo One', sans-serif;
+  margin: 10vh auto 0;
+  padding: 0 10vw;
+  .ticTacToe__section {
+    background-color: $color-game;
+    margin: 0 auto;
+    border: $border-game;
+    border-radius: 20px;
+    .ticTacToe__section__title {
+      font-size: 4vh;
+      border-bottom: $border-game;
+    }
+    .ticTacToe__section__sign {
+      padding-top: 2.5vh;
+      height: 15vh;
+      .sign__image-jaina {
+        height: 9vh;
+        box-shadow: 5px 5px 15px $color-jaina;
+      }
+      .sign__image-grom {
+        height: 9vh;
+        box-shadow: 5px 5px 15px $color-grom;
+      }
+    }
+    .ticTacToe__section__text {
+      height: 15vh;
+    }
+    .ticTacToe__section__score {
+      border-top: $border-game;
+      border-bottom: $border-game;
+    }
+    .ticTacToe__section__board-notActive {
+      pointer-events: none;
+    }
+    .ticTacToe__section__board {
+      padding: 2.5vh;
+      height: 50vh;
+      .board__field {
+        height: 15vh;
+        border: $border-game;
+        .sign__image-jaina {
+          margin-top: 2vh;
+          height: 9vh;
+          box-shadow: 5px 5px 15px $color-jaina;
+        }
+        .sign__image-grom {
+          margin-top: 2vh;
+          height: 9vh;
+          box-shadow: 5px 5px 15px $color-grom;
+        }
+      }
+      .board__field-notActive {
+        pointer-events: none;
+      }
+    }
+  }
+}
