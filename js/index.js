@@ -1,7 +1,15 @@
-$(document).ready(function() {
+$(document).ready(function () {
   var boardColor = "orange lighten-2";
-  var player = { img: "", name: "", color: "" };
-  var AI = { img: "", name: "", color: "" };
+  var player = {
+    img: "",
+    name: "",
+    color: ""
+  };
+  var AI = {
+    img: "",
+    name: "",
+    color: ""
+  };
   var usedId = [];
   var points = 0;
   var move = 0;
@@ -23,7 +31,7 @@ $(document).ready(function() {
     compMove();
   }
   //Jaina is chosen. Setting up.
-  $("#jaina").click(function() {
+  $("#jaina").click(function () {
     $("#jaina").removeClass("s4").addClass("s7");
     $("#grom").removeClass("s4").addClass("s1");
     $(".sign__image-grom").hide();
@@ -38,7 +46,7 @@ $(document).ready(function() {
   });
 
   //Grom is chosen. Setting up.
-  $("#grom").click(function() {
+  $("#grom").click(function () {
     $("#grom").removeClass("s4").addClass("s7");
     $("#jaina").removeClass("s4").addClass("s1");
     $(".sign__image-jaina").hide();
@@ -53,7 +61,7 @@ $(document).ready(function() {
   });
 
   //Player click.
-  $(".board__field").click(function() {
+  $(".board__field").click(function () {
     if (move === 0 || isFinished) {
       return false;
     }
@@ -62,7 +70,7 @@ $(document).ready(function() {
     $(".ticTacToe__section__board").addClass(
       "ticTacToe__section__board-notActive"
     );
-    setTimeout(function() {
+    setTimeout(function () {
       $(".ticTacToe__section__board").removeClass(
         "ticTacToe__section__board-notActive"
       );
@@ -81,7 +89,7 @@ $(document).ready(function() {
   //Computer movement
   function compMove() {
     if (!isFinished) {
-      setTimeout(function() {
+      setTimeout(function () {
         var id = Math.floor(Math.random() * 9);
         while (usedId.includes(id) && usedId.length < 9) {
           id = Math.floor(Math.random() * 9);
@@ -104,43 +112,43 @@ $(document).ready(function() {
     var activeClass = active.name;
     switch (true) {
       case $("#0").hasClass(activeClass) &&
-        $("#1").hasClass(activeClass) &&
-        $("#2").hasClass(activeClass):
+      $("#1").hasClass(activeClass) &&
+      $("#2").hasClass(activeClass):
         won(active);
         break;
       case $("#3").hasClass(activeClass) &&
-        $("#4").hasClass(activeClass) &&
-        $("#5").hasClass(activeClass):
+      $("#4").hasClass(activeClass) &&
+      $("#5").hasClass(activeClass):
         won(active);
         break;
       case $("#6").hasClass(activeClass) &&
-        $("#7").hasClass(activeClass) &&
-        $("#8").hasClass(activeClass):
+      $("#7").hasClass(activeClass) &&
+      $("#8").hasClass(activeClass):
         won(active);
         break;
       case $("#0").hasClass(activeClass) &&
-        $("#4").hasClass(activeClass) &&
-        $("#8").hasClass(activeClass):
+      $("#4").hasClass(activeClass) &&
+      $("#8").hasClass(activeClass):
         won(active);
         break;
       case $("#2").hasClass(activeClass) &&
-        $("#4").hasClass(activeClass) &&
-        $("#6").hasClass(activeClass):
+      $("#4").hasClass(activeClass) &&
+      $("#6").hasClass(activeClass):
         won(active);
         break;
       case $("#0").hasClass(activeClass) &&
-        $("#3").hasClass(activeClass) &&
-        $("#6").hasClass(activeClass):
+      $("#3").hasClass(activeClass) &&
+      $("#6").hasClass(activeClass):
         won(active);
         break;
       case $("#1").hasClass(activeClass) &&
-        $("#4").hasClass(activeClass) &&
-        $("#7").hasClass(activeClass):
+      $("#4").hasClass(activeClass) &&
+      $("#7").hasClass(activeClass):
         won(active);
         break;
       case $("#2").hasClass(activeClass) &&
-        $("#5").hasClass(activeClass) &&
-        $("#8").hasClass(activeClass):
+      $("#5").hasClass(activeClass) &&
+      $("#8").hasClass(activeClass):
         won(active);
         break;
       default:
@@ -155,14 +163,14 @@ $(document).ready(function() {
       console.log("won");
       isFinished = true;
       points++;
-      setTimeout(function() {
+      setTimeout(function () {
         restart(active);
       }, 3000);
     } else {
       $(".score").text("You lost!");
       console.log("lost");
       isFinished = true;
-      setTimeout(function() {
+      setTimeout(function () {
         restart(active);
       }, 3000);
     }
@@ -173,7 +181,7 @@ $(document).ready(function() {
     if (move == 9) {
       $(".score").text("It's a draw!");
       isFinished = true;
-      setTimeout(function() {
+      setTimeout(function () {
         restart(active);
       }, 3000);
       console.log("draw");
@@ -186,7 +194,7 @@ $(document).ready(function() {
     usedId = [];
     move = 0;
     $(".score").text("Score: " + points);
-    $(".ticTacToe__section__board > a").each(function() {
+    $(".ticTacToe__section__board > a").each(function () {
       $(this).html("");
       $(this).removeClass(player.name).removeClass(AI.name);
       $(this)

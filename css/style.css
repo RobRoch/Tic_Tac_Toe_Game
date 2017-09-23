@@ -1,63 +1,56 @@
-body {
+.ticTacToe {
+  width: 100vw;
+  height: 100vh;
   background: url(../images/background-image.jpg) no-repeat center center fixed;
   background-image: cover;
-}
-
-.ticTacToe {
   font-family: 'Russo One', sans-serif;
-  margin: 10vh auto 0;
-  padding: 0 10vw;
-}
-.ticTacToe .ticTacToe__section {
-  background-color: #FBBA64;
   margin: 0 auto;
-  border: 1px solid grey;
-  border-radius: 20px;
-}
-.ticTacToe .ticTacToe__section .ticTacToe__section__title {
-  font-size: 4vh;
-  border-bottom: 1px solid grey;
-}
-.ticTacToe .ticTacToe__section .ticTacToe__section__sign {
-  padding-top: 2.5vh;
-  height: 15vh;
-}
-.ticTacToe .ticTacToe__section .ticTacToe__section__sign .sign__image-jaina {
-  height: 9vh;
-  box-shadow: 5px 5px 15px #340D32;
-}
-.ticTacToe .ticTacToe__section .ticTacToe__section__sign .sign__image-grom {
-  height: 9vh;
-  box-shadow: 5px 5px 15px #7B0305;
-}
-.ticTacToe .ticTacToe__section .ticTacToe__section__text {
-  height: 15vh;
-}
-.ticTacToe .ticTacToe__section .ticTacToe__section__score {
-  border-top: 1px solid grey;
-  border-bottom: 1px solid grey;
-}
-.ticTacToe .ticTacToe__section .ticTacToe__section__board-notActive {
-  pointer-events: none;
-}
-.ticTacToe .ticTacToe__section .ticTacToe__section__board {
-  padding: 2.5vh;
-  height: 50vh;
-}
-.ticTacToe .ticTacToe__section .ticTacToe__section__board .board__field {
-  height: 15vh;
-  border: 1px solid grey;
-}
-.ticTacToe .ticTacToe__section .ticTacToe__section__board .board__field .sign__image-jaina {
-  margin-top: 2vh;
-  height: 9vh;
-  box-shadow: 5px 5px 15px #340D32;
-}
-.ticTacToe .ticTacToe__section .ticTacToe__section__board .board__field .sign__image-grom {
-  margin-top: 2vh;
-  height: 9vh;
-  box-shadow: 5px 5px 15px #7B0305;
-}
-.ticTacToe .ticTacToe__section .ticTacToe__section__board .board__field-notActive {
-  pointer-events: none;
-}
+  padding: 5vh 10vw; }
+  .ticTacToe .ticTacToe__section {
+    background-color: #FBBA64;
+    margin: 0 auto;
+    border: 1px solid grey;
+    border-radius: 20px; }
+    .ticTacToe .ticTacToe__section .ticTacToe__section__title {
+      font-size: 3vh;
+      border-bottom: 1px solid grey; }
+      @media (min-width: 600px) {
+        .ticTacToe .ticTacToe__section .ticTacToe__section__title {
+          font-size: 4vh; } }
+    .ticTacToe .ticTacToe__section .ticTacToe__section__sign {
+      padding-top: 2.5vh;
+      height: 15vh; }
+      .ticTacToe .ticTacToe__section .ticTacToe__section__sign .sign__image-jaina {
+        height: 9vh;
+        box-shadow: 5px 5px 15px #340D32; }
+      .ticTacToe .ticTacToe__section .ticTacToe__section__sign .sign__image-grom {
+        height: 9vh;
+        box-shadow: 5px 5px 15px #7B0305; }
+    .ticTacToe .ticTacToe__section .ticTacToe__section__text {
+      font-size: 1.5vh; }
+      @media (min-width: 600px) {
+        .ticTacToe .ticTacToe__section .ticTacToe__section__text {
+          font-size: 2vh; } }
+    .ticTacToe .ticTacToe__section .ticTacToe__section__score {
+      border-top: 1px solid grey;
+      border-bottom: 1px solid grey; }
+    .ticTacToe .ticTacToe__section .ticTacToe__section__board-notActive {
+      pointer-events: none; }
+    .ticTacToe .ticTacToe__section .ticTacToe__section__board {
+      padding: 2.5vh;
+      height: 50vh; }
+      .ticTacToe .ticTacToe__section .ticTacToe__section__board .board__field {
+        height: 15vh;
+        border: 1px solid grey; }
+        .ticTacToe .ticTacToe__section .ticTacToe__section__board .board__field .sign__image-jaina {
+          margin-top: 2vh;
+          height: 9vh;
+          box-shadow: 5px 5px 15px #340D32; }
+        .ticTacToe .ticTacToe__section .ticTacToe__section__board .board__field .sign__image-grom {
+          margin-top: 2vh;
+          height: 9vh;
+          box-shadow: 5px 5px 15px #7B0305; }
+      .ticTacToe .ticTacToe__section .ticTacToe__section__board .board__field-notActive {
+        pointer-events: none; }
+
+/*# sourceMappingURL=style.css.map */

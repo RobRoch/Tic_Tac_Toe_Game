@@ -2,22 +2,25 @@ $border-game: 1px solid grey;
 $color-game: #FBBA64;
 $color-jaina: #340D32;
 $color-grom: #7B0305;
-body {
+.ticTacToe {
+  width: 100vw;
+  height: 100vh;
   background: url(../images/background-image.jpg) no-repeat center center fixed;
   background-image: cover;
-}
-.ticTacToe {
   font-family: 'Russo One', sans-serif;
-  margin: 10vh auto 0;
-  padding: 0 10vw;
+  margin: 0 auto;
+  padding: 5vh 10vw;
   .ticTacToe__section {
     background-color: $color-game;
     margin: 0 auto;
     border: $border-game;
     border-radius: 20px;
     .ticTacToe__section__title {
-      font-size: 4vh;
+      font-size: 3vh;
       border-bottom: $border-game;
+      @media (min-width: 600px) {
+        font-size: 4vh;
+      }
     }
     .ticTacToe__section__sign {
       padding-top: 2.5vh;
@@ -32,7 +35,10 @@ body {
       }
     }
     .ticTacToe__section__text {
-      height: 15vh;
+      font-size: 1.5vh;
+      @media (min-width: 600px) {
+        font-size: 2vh;
+      }
     }
     .ticTacToe__section__score {
       border-top: $border-game;
